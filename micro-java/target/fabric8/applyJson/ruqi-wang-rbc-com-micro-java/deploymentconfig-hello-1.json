@@ -1,0 +1,300 @@
+{
+  "apiVersion" : "apps.openshift.io/v1",
+  "kind" : "DeploymentConfig",
+  "metadata" : {
+    "annotations" : {
+      "fabric8.io/git-branch" : "micro-config",
+      "fabric8.io/git-commit" : "609e5cb05a7f118d93f47a1dc66a31d899315be2",
+      "fabric8.io/git-url" : "https://github.com/rqwzhou/DO288-apps"
+    },
+    "creationTimestamp" : "2020-12-31T22:46:12Z",
+    "generation" : 4,
+    "labels" : {
+      "app" : "hello",
+      "group" : "com.redhat.training.openshift",
+      "provider" : "fabric8",
+      "version" : "1.0"
+    },
+    "name" : "hello",
+    "namespace" : "ruqi-wang-rbc-com-micro-java",
+    "resourceVersion" : "89959650",
+    "selfLink" : "/apis/apps.openshift.io/v1/namespaces/ruqi-wang-rbc-com-micro-java/deploymentconfigs/hello",
+    "uid" : "73fd701a-2b1c-409c-af5c-7d9ae1cfbf5f",
+    "managedFields" : [ {
+      "manager" : "openshift-controller-manager",
+      "operation" : "Update",
+      "apiVersion" : "apps.openshift.io/v1",
+      "time" : "2020-12-31T22:54:45Z",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:status" : {
+          "f:unavailableReplicas" : { },
+          "f:updatedReplicas" : { }
+        }
+      }
+    }, {
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "apiVersion" : "apps.openshift.io/v1",
+      "time" : "2020-12-31T22:54:46Z",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:fabric8.io/git-branch" : { },
+            "f:fabric8.io/git-commit" : { },
+            "f:fabric8.io/git-url" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:replicas" : { },
+          "f:revisionHistoryLimit" : { },
+          "f:selector" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { }
+          },
+          "f:strategy" : {
+            "f:activeDeadlineSeconds" : { },
+            "f:rollingParams" : {
+              "." : { },
+              "f:intervalSeconds" : { },
+              "f:maxSurge" : { },
+              "f:maxUnavailable" : { },
+              "f:timeoutSeconds" : { },
+              "f:updatePeriodSeconds" : { }
+            },
+            "f:type" : { }
+          },
+          "f:template" : {
+            "." : { },
+            "f:metadata" : {
+              "." : { },
+              "f:annotations" : {
+                "." : { },
+                "f:fabric8.io/git-branch" : { },
+                "f:fabric8.io/git-commit" : { },
+                "f:fabric8.io/git-url" : { }
+              },
+              "f:creationTimestamp" : { },
+              "f:labels" : {
+                "." : { },
+                "f:app" : { },
+                "f:group" : { },
+                "f:provider" : { },
+                "f:version" : { }
+              }
+            },
+            "f:spec" : {
+              "." : { },
+              "f:containers" : {
+                "." : { },
+                "k:{\"name\":\"thorntail-v2\"}" : {
+                  "." : { },
+                  "f:env" : {
+                    "." : { },
+                    "k:{\"name\":\"KUBERNETES_NAMESPACE\"}" : {
+                      "." : { },
+                      "f:name" : { },
+                      "f:valueFrom" : {
+                        "." : { },
+                        "f:fieldRef" : {
+                          "." : { },
+                          "f:apiVersion" : { },
+                          "f:fieldPath" : { }
+                        }
+                      }
+                    }
+                  },
+                  "f:envFrom" : { },
+                  "f:image" : { },
+                  "f:imagePullPolicy" : { },
+                  "f:name" : { },
+                  "f:ports" : {
+                    "." : { },
+                    "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    },
+                    "k:{\"containerPort\":8778,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    },
+                    "k:{\"containerPort\":9779,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    }
+                  },
+                  "f:resources" : { },
+                  "f:securityContext" : {
+                    "." : { },
+                    "f:privileged" : { }
+                  },
+                  "f:terminationMessagePath" : { },
+                  "f:terminationMessagePolicy" : { }
+                }
+              },
+              "f:dnsPolicy" : { },
+              "f:restartPolicy" : { },
+              "f:schedulerName" : { },
+              "f:securityContext" : { },
+              "f:terminationGracePeriodSeconds" : { }
+            }
+          },
+          "f:triggers" : { }
+        },
+        "f:status" : {
+          "f:availableReplicas" : { },
+          "f:latestVersion" : { },
+          "f:observedGeneration" : { },
+          "f:replicas" : { }
+        }
+      }
+    } ]
+  },
+  "spec" : {
+    "replicas" : 1,
+    "revisionHistoryLimit" : 2,
+    "selector" : {
+      "app" : "hello",
+      "group" : "com.redhat.training.openshift",
+      "provider" : "fabric8"
+    },
+    "strategy" : {
+      "activeDeadlineSeconds" : 21600,
+      "resources" : { },
+      "rollingParams" : {
+        "intervalSeconds" : 1,
+        "maxSurge" : "25%",
+        "maxUnavailable" : "25%",
+        "timeoutSeconds" : 3600,
+        "updatePeriodSeconds" : 1
+      },
+      "type" : "Rolling"
+    },
+    "template" : {
+      "metadata" : {
+        "annotations" : {
+          "fabric8.io/git-branch" : "micro-config",
+          "fabric8.io/git-commit" : "609e5cb05a7f118d93f47a1dc66a31d899315be2",
+          "fabric8.io/git-url" : "https://github.com/rqwzhou/DO288-apps"
+        },
+        "labels" : {
+          "app" : "hello",
+          "group" : "com.redhat.training.openshift",
+          "provider" : "fabric8",
+          "version" : "1.0"
+        }
+      },
+      "spec" : {
+        "containers" : [ {
+          "env" : [ {
+            "name" : "KUBERNETES_NAMESPACE",
+            "valueFrom" : {
+              "fieldRef" : {
+                "apiVersion" : "v1",
+                "fieldPath" : "metadata.namespace"
+              }
+            }
+          } ],
+          "envFrom" : [ {
+            "configMapRef" : {
+              "name" : "env-config"
+            }
+          } ],
+          "image" : "hello:1.0",
+          "imagePullPolicy" : "IfNotPresent",
+          "name" : "thorntail-v2",
+          "ports" : [ {
+            "containerPort" : 8080,
+            "name" : "http",
+            "protocol" : "TCP"
+          }, {
+            "containerPort" : 9779,
+            "name" : "prometheus",
+            "protocol" : "TCP"
+          }, {
+            "containerPort" : 8778,
+            "name" : "jolokia",
+            "protocol" : "TCP"
+          } ],
+          "resources" : { },
+          "securityContext" : {
+            "privileged" : false
+          },
+          "terminationMessagePath" : "/dev/termination-log",
+          "terminationMessagePolicy" : "File"
+        } ],
+        "dnsPolicy" : "ClusterFirst",
+        "restartPolicy" : "Always",
+        "schedulerName" : "default-scheduler",
+        "securityContext" : { },
+        "terminationGracePeriodSeconds" : 30
+      }
+    },
+    "test" : false,
+    "triggers" : [ {
+      "type" : "ConfigChange"
+    }, {
+      "imageChangeParams" : {
+        "automatic" : true,
+        "containerNames" : [ "thorntail-v2" ],
+        "from" : {
+          "kind" : "ImageStreamTag",
+          "name" : "hello:1.0",
+          "namespace" : "ruqi-wang-rbc-com-micro-java"
+        }
+      },
+      "type" : "ImageChange"
+    } ]
+  },
+  "status" : {
+    "availableReplicas" : 1,
+    "conditions" : [ {
+      "lastTransitionTime" : "2020-12-31T22:46:22Z",
+      "lastUpdateTime" : "2020-12-31T22:46:22Z",
+      "message" : "Deployment config has minimum availability.",
+      "status" : "True",
+      "type" : "Available"
+    }, {
+      "lastTransitionTime" : "2020-12-31T22:54:45Z",
+      "lastUpdateTime" : "2020-12-31T22:54:45Z",
+      "message" : "replication controller \"hello-2\" is waiting for pod \"hello-2-deploy\" to run",
+      "status" : "Unknown",
+      "type" : "Progressing"
+    } ],
+    "details" : {
+      "causes" : [ {
+        "imageTrigger" : {
+          "from" : {
+            "kind" : "DockerImage",
+            "name" : "image-registry.openshift-image-registry.svc:5000/ruqi-wang-rbc-com-micro-java/hello@sha256:40e16f781b41517c24735f89cee2ab4fa34d8305cdb3ac4d49a36886824fec41"
+          }
+        },
+        "type" : "ImageChange"
+      } ],
+      "message" : "image change"
+    },
+    "latestVersion" : 2,
+    "observedGeneration" : 3,
+    "readyReplicas" : 1,
+    "replicas" : 1,
+    "unavailableReplicas" : 0,
+    "updatedReplicas" : 0
+  }
+}
